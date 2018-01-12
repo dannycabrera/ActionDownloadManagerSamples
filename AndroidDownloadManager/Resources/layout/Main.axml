@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+    <ImageView
+        android:src="@drawable/icon"
+        android:layout_width="fill_parent"
+        android:layout_height="110.7dp"
+        android:id="@+id/imageView1"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:text="Progress:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressText"
+        android:visibility="invisible" />
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/startDownload"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Download"
+        android:layout_marginTop="10dp"
+        android:enabled="true" />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel Download"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
+</LinearLayout>

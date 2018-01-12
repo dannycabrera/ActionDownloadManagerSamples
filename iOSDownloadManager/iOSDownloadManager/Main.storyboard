@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3E-PA-ZO4">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FZY-n1-iDs"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Download" id="kgX-WN-ZqL">
+                                        <connections>
+                                            <action selector="StartDownloading:" destination="BYZ-38-t0r" id="asz-dz-vbt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QG0-3S-sVl"/>
+                                    <barButtonItem enabled="NO" title="Cancel" id="6XW-as-zT7">
+                                        <connections>
+                                            <action selector="StopDownloading:" destination="BYZ-38-t0r" id="3b3-C1-jAR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-eW-efg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="411"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CtS-FX-pKR">
+                                <rect key="frame" x="16" y="602" width="343" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="pVu-UQ-sy4"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.99272316694259644" green="0.25253051519393921" blue="0.13515546917915344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-3b-YHk">
+                                <rect key="frame" x="16" y="566" width="307" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cY3-AO-gH6"/>
+                                    <constraint firstAttribute="width" constant="307" id="yih-Ow-49v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8Uj-Ke-D9J">
+                                <rect key="frame" x="339" y="566" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="BMh-kY-dXr"/>
+                                    <constraint firstAttribute="height" constant="20" id="Uur-5h-S0c"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kTd-eW-efg" secondAttribute="trailing" id="2QB-Gb-QTr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r3E-PA-ZO4" secondAttribute="bottom" id="FDO-6i-XEq"/>
+                            <constraint firstItem="CtS-FX-pKR" firstAttribute="top" secondItem="8Uj-Ke-D9J" secondAttribute="bottom" constant="16" id="Gko-L4-6ro"/>
+                            <constraint firstItem="r3E-PA-ZO4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NFG-cT-4Hb"/>
+                            <constraint firstAttribute="trailing" secondItem="r3E-PA-ZO4" secondAttribute="trailing" id="Scr-p7-5ND"/>
+                            <constraint firstItem="CtS-FX-pKR" firstAttribute="top" secondItem="sCj-3b-YHk" secondAttribute="bottom" constant="15" id="UcG-8K-9Sj"/>
+                            <constraint firstItem="CtS-FX-pKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VPU-a1-dRi"/>
+                            <constraint firstItem="sCj-3b-YHk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bHy-ge-jO6"/>
+                            <constraint firstItem="8Uj-Ke-D9J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cKw-z5-xIV"/>
+                            <constraint firstItem="r3E-PA-ZO4" firstAttribute="top" secondItem="CtS-FX-pKR" secondAttribute="bottom" constant="19" id="dMJ-uh-tH2"/>
+                            <constraint firstItem="kTd-eW-efg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eLd-CC-p5f"/>
+                            <constraint firstItem="sCj-3b-YHk" firstAttribute="top" secondItem="kTd-eW-efg" secondAttribute="bottom" constant="155" id="eM1-ca-N14"/>
+                            <constraint firstItem="CtS-FX-pKR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="r7q-X8-2Oo"/>
+                            <constraint firstItem="kTd-eW-efg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rGV-Ug-XcM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CancelButton" destination="6XW-as-zT7" id="Lnd-Yi-nKf"/>
+                        <outlet property="DownloadButton" destination="kgX-WN-ZqL" id="cEF-Fg-MdM"/>
+                        <outlet property="DownloadingActivity" destination="8Uj-Ke-D9J" id="IYU-3S-KBU"/>
+                        <outlet property="DownloadingLabel" destination="sCj-3b-YHk" id="4Z9-Sq-jzb"/>
+                        <outlet property="DownloadingProgress" destination="CtS-FX-pKR" id="uFl-dj-WGw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="512" height="512"/>
+    </resources>
+</document>
